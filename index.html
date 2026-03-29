@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Nefes Egzersizleri | Sosyal Sorumluluk Projesi</title>
+    <meta name="description"
+        content="Konuşma bozukluğu olan kişiler için nefes kontrolü sağlayan sosyal sorumluluk projesi uygulaması.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Background Glowing Orbs -->
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+
+    <main class="app-container">
+
+        <!-- Language Switcher -->
+        <div class="lang-switcher">
+            <button id="btn-tr" class="active" onclick="setLanguage('tr')">TR</button>
+            <button id="btn-en" onclick="setLanguage('en')">EN</button>
+        </div>
+
+        <!-- Home View -->
+        <section id="home-view" class="view active">
+            <header>
+                <h1 data-i18n="title">Nefes Egzersizleri</h1>
+                <p class="subtitle" data-i18n="subtitle">Konuşma bozukluğu olan kişiler için sosyal sorumluluk projesi</p>
+            </header>
+
+            <div class="info-card glass-panel">
+                <div class="icon-wrapper">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/>
+                    </svg>
+                </div>
+                <h2 data-i18n="welcome_title">Hoş Geldiniz</h2>
+                <p data-i18n="welcome_desc">Bu platform, konuşma akıcılığını destekleyen özel nefes tekniklerini pratik
+                    etmeniz için tasarlanmıştır. Egzersiz sırasındaki yönergelere ve animasyonlara dikkat ederek
+                    istediğiniz egzersizi uygulayabilirsiniz.</p>
+            </div>
+
+            <div class="exercises-grid">
+                <!-- Exercise 1 Card -->
+                <div class="exercise-card glass-panel" onclick="startExercise('478')">
+                    <div class="card-content">
+                        <h3 data-i18n="ex1_title">4-7-8 Nefes Egzersizi</h3>
+                        <p data-i18n="ex1_desc_full">Sinir sistemini sakinleştirmeye yardımcı olan rahatlatıcı bir
+                            teknik.</p>
+                        <div class="tags">
+                            <span class="tag" data-i18n="tag_4s">4sn Al</span>
+                            <span class="tag" data-i18n="tag_7s">7sn Tut</span>
+                            <span class="tag" data-i18n="tag_8s">8sn Ver</span>
+                        </div>
+                    </div>
+                    <button class="action-btn" aria-label="Start Exercise">
+                        <span data-i18n="btn_start">Başla</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Exercise 2 Card -->
+                <div class="exercise-card glass-panel" onclick="startExercise('costal')">
+                    <div class="card-content">
+                        <h3 data-i18n="ex2_title">Keep it Costal</h3>
+                        <p data-i18n="ex2_desc_full">Diyaframı aktif kullanmak ve nefes kontrolünü sağlamak için etkili
+                            yöntem.</p>
+                        <div class="tags">
+                            <span class="tag" data-i18n="tag_fast_inhale">Hızlı Al</span>
+                            <span class="tag" data-i18n="tag_fast_exhale">Hemen Ver</span>
+                            <span class="tag" data-i18n="tag_6s">6sn Bekle</span>
+                        </div>
+                    </div>
+                    <button class="action-btn" aria-label="Start Exercise">
+                        <span data-i18n="btn_start">Başla</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="footer-credits glass-panel" style="padding: 1.5rem; text-align: center; margin-bottom: 2rem;">
+                <p data-i18n="credits_text" style="margin-bottom: 1rem; color: #cbd5e1;">Bu proje <strong>Ahmet Baki
+                        Memiş</strong> tarafından hazırlanmıştır.</p>
+                <div class="contact-links"
+                    style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+                    <a href="https://github.com/mestoness" target="_blank"
+                        style="color: var(--accent-1); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; font-weight: 500;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                        </svg>
+                        GitHub
+                    </a>
+                    <a href="mailto:contactmestoness@gmail.com"
+                        style="color: var(--accent-1); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; font-weight: 500;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                        İletişim
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exercise View -->
+        <section id="exercise-view" class="view">
+            <button class="back-btn glass-panel" onclick="goHome()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7" />
+                </svg>
+                <span data-i18n="btn_back">Geri Dön</span>
+            </button>
+
+            <div class="exercise-header">
+                <h2 id="ex-title">Egzersiz Adı</h2>
+                <p id="ex-desc">Açıklama</p>
+            </div>
+
+            <div class="breathing-container">
+                <div class="breathing-circle" id="b-circle">
+                    <div class="circle-inner"></div>
+                    <div class="circle-core">
+                        <span id="instruction-text" data-i18n="ready">Hazır Mısınız?</span>
+                        <span id="timer-text">--</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="play-pause-btn" class="primary-btn pulse-glow" onclick="toggleExercise()">
+                    <svg id="play-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M5 3l14 9-14 9V3z" />
+                    </svg>
+                    <svg id="pause-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+                        style="display: none;">
+                        <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
+                    </svg>
+                    <span id="play-btn-text" data-i18n="btn_exercise_start">Egzersizi Başlat</span>
+                </button>
+            </div>
+            <div id="audio-status" data-i18n="audio_playing">Ses oynatılıyor...</div>
+        </section>
+
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
